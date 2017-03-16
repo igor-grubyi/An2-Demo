@@ -1,0 +1,7 @@
+<h2>{{title}}</h2>
+<h3>Cars left: {{_count}}</h3>
+<app-car
+    *ngFor='let car of cars'
+    [car]=car
+    (sale)='onSaleCar($event)' >
+</app-car>

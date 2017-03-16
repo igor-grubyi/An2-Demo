@@ -1,0 +1,10 @@
+<div> 
+    <ul>
+        <li>Model: {{car._model}}</li>
+        <li>Color: {{car._color}}</li>
+        <li>State: {{car.state}}</li>
+        <li>Price: {{car.price}}</li>
+        <li *ngIf="car.state=='for sale'"><button (click)="saleCar($event)" >Buy</button></li>
+        
+    </ul>
+</div>
