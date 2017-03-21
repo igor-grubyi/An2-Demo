@@ -19,10 +19,6 @@ export class CarComponent {
         this.select = new EventEmitter<Car>();
     }    
 
-    addCar(event: any): void {
-        this.add.emit(this.car);
-    }
-
     selectCar(event: any): void {
         this.select.emit(this.car);
     }
