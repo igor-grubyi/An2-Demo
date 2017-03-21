@@ -1,10 +1,16 @@
 export class Car {
-    state='for sale';
-    price=20000;
+    private minPrice = 100;
+    private maxPrice = 300;
+
+    state = 'for sale';
+    
 
     constructor(
-        private _id: number,
-        private _model: string,
-        private _color: string,
-    ){ }
+       public id: number,
+       public model: string,
+       public color: string,
+       public price?: number
+    ){ 
+        this.price = Math.floor(Math.random() * (this.maxPrice - this.minPrice) + this.minPrice) * 100;
+    }
 }

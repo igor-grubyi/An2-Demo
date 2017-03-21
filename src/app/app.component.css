@@ -1,3 +1,21 @@
-h1 {
-    color: darkblue;
+.header, .main, .footer {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.header{
+    background-color: yellowgreen;
+}
+
+.header h2 {
+    color: green;
+    text-align: center;
+}
+
+.main {
+    background-color: yellow;
+}
+
+.footer {
+    background-color: lightgray;
 }

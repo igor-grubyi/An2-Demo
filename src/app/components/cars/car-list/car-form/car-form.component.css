@@ -1,0 +1,10 @@
+.panel-default {
+    margin-left: 30%;
+    background-color: yellow;
+    padding: 0;
+    width: max-content;
+}
+
+input {
+    width: 100px;
+}

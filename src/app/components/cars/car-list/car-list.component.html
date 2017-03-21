@@ -2,6 +2,11 @@
 <h3>Cars left: {{_count}}</h3>
 <app-car
     *ngFor='let car of cars'
-    [car]=car
-    (sale)='onSaleCar($event)' >
+    [car]=car 
+    (delete)='onDeleteCar($event)'
+    (select)='onSelectCar($event)' >
 </app-car>
+
+<app-car-form
+    (add)=onAddCar($event)>  
+</app-car-form>

@@ -1,22 +1,43 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, HostBinding, HostListener } from '@angular/core';
 import { Car } from './../../car.model';
 
 @Component({
     selector: 'app-car',
     templateUrl: './car.component.html',
-    styleUrls: ['./car.component.css']
+    styleUrls: ['./car.component.css'],
 })
+
 export class CarComponent {
     @Input() car: Car;
-    @Output() sale: EventEmitter<Car>;
+    @Output() delete: EventEmitter<Car>;
+    @Output() select: EventEmitter<Car>;
 
+    @HostBinding('style.background-color') b_colorrr = "yellow";
+    
     constructor() {
-        this.sale = new EventEmitter<Car>();
+        this.delete = new EventEmitter<Car>();
+        this.select = new EventEmitter<Car>();
     }    
 
-    saleCar(event: any): void {
-        this.car.state = 'sold out';
-        this.car.price = 0;
-        this.sale.emit(this.car);
+    addCar(event: any): void {
+        this.add.emit(this.car);
     }
+
+    selectCar(event: any): void {
+        this.select.emit(this.car);
+    }
+
+    deleteCar(event: any): void {
+        this.car.state = 'deleted';
+        this.delete.emit(this.car);
+    }
+
+     @HostListener('mouseenter') onMouseEnter() {
+        this.b_colorrr= "green" ;
+    }
+
+    @HostListener('mouseleave') onMouseLeave() {
+        this.b_colorrr = "yellow" ;
+    }
+  
 }

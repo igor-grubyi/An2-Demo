@@ -1,0 +1,27 @@
+<div class="panel-default">
+        <h4 class="pannel-title">
+            <span class="glyphicon glyphicon-plus-sign"></span> Edit car list
+        </h4>
+    <div class="panel-body">
+        <form>
+            <label for="model">Model</label>
+            <input type="text"
+                placeholder="Car model"
+                #model>
+            <label for="color">Car color</label>
+            <input type="text"
+                placeholder="color"
+                #color>
+            <label for="price">Price</label>
+            <input type="number"
+                min="10000"
+                step="500"
+                placeholder="Prise: $"
+                #price>
+          <button type="submit" class="btn-add"
+                  (click)='onAddCar($event)'>Add</button>
+          <button type="submit" class="btn-edit"
+                  (click)='onChangeCar($event)'>Edit</button>
+        </form>
+    </div>
+</div>

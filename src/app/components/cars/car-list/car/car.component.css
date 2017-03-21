@@ -1,6 +1,18 @@
+ul {
+    
+    margin-left: 30%;        
+    padding: 0;
+    width: max-content;
+}
+
 li {
     display: inline;
-    margin-right: 5px; 
-    border: 1px solid coral; 
-    padding: 3px; 
+    margin-right: 5px;
+    margin-left: 0px;  
+    padding: 3px;
+    background-color: white;
+}
+:host {
+    width: max-content;
+    display: block;  
 }
